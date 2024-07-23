@@ -1,13 +1,16 @@
 # Degree
-- degree: Bachelor of Arts, Human Rights
-  uni: Yale University
-  year: 2004 &mdash; 2008
+- degree: Master of Engineering, Communications & Information Systems
+  uni: Nanjing University of Posts and Telecommunications
+  year: 2022 &mdash; 2025
   awards:
-    - award: Summa Cumme Laude graduate
-  summary: If you had any meaningful roles at college, feel free to write about them here
+    - award: First Prize Scholarship in 2022
+    - award: Bronze Award of 2023 "The Challenge Cup"
+  # summary: If you had any meaningful roles at college, feel free to write about them here
 
-- degree: High School Diploma
-  uni: Springfield High School
-  year: 2004
-  award: Most likely to succeed
-  summary: You can choose to have either a single or multiple awards
+- degree: Bachelor of Engineering, Electronics & Information Engineering
+  uni: Nantong University
+  year: 2018 &mdash; 2022
+  awards:
+    - award: First Prize Scholarship in 2019, 2021
+    - award: Gold Award of 2020 China College Students' Innovational Competition
+  summary: Graduation Thesis-<b>Research on Random Access for Large-Scale MTC Based on Machine Learning</b>

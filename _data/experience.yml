@@ -1,19 +1,19 @@
-# Jobs
-# VP of Global Communications
-- company: Springfield International Human Rights Outreach
-  position: VP of Global Communications
-  duration: Oct, 2013 &mdash; Present
-  summary: Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points	<ul class="resume-item-list"><li>A project you are proud of</li><li>Another awesome project</li><li>or a team or department you worked with</li></ul>
+# Pub
+# WCSP2024
+- company: Learning-Based Random Access Protocol With RIS-Aided Cell-Free Networks
+  position: <i>IEEE 16th International Conference on Wireless Communications and Signal Processing</i> (WCSP2024)
+  duration: Under review
+  summary: As the wireless networking technology transitions into its sixth generation (6G), the demand for higher reliability and increased speed is ever-growing. In this paper, we propose a learning-based random access protocol with RIS-aided cell-free networks to optimize throughput and age of information. Specifically, our scheme contains two optimized components, preamble selection and preamble collision resolution. Powered by the deep reinforcement learning (DRL) algorithm, the proposed protocol aims to maximize the long-term reward of the network by learning the optimal policy for the UEs to access the network. The proposed scheme is evaluated through simulations, and the results show that our scheme outperforms the conventional random access schemes in terms of the average age of information, data throughput and preamble collision. Given the practical properties in our simulation, the proposed scheme is a promising solution in RIS-aided cell-free networks.
 
 # Director of Digital Stratgy
-- company: United Nations Human Rights Council
-  position: Director of Digital Strategy
-  duration:  Jun, 2010 &mdash; Sept, 2013
-  summary: If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.
+- company: A Hybrid Collaborative Learning for Age of Information Minimization in Massive Access
+  position: <i>IEEE Transactions on Vehicular Technology</i> (TVT)
+  duration: Accepted
+  summary: Supporting massive access from Internet of Things (IoT) devices plays a pivotal role in the design of 6G networks. Nonetheless, concurrent massive access to the network deteriorates the quality of 6G communications. To overcome the challenge of massive access, our focus shifts to optimizing the age-critical frameless ALOHA (ACFA) random access protocol. The conventional ACFA suffers from high latency and unreliability when massive devices attempt to access the network. Consequently, we introduce an adaptive algorithm to resolve the transmission issues. This paper optimizes the random access channel (RACH) procedure by maximizing a long-term multi-objective function, which consists of the average age of information (AoI), normalized throughput, traffic load and the average number of successfully accessed machine-type communication devices. To achieve the optimal objective in ACFA, we apply deep reinforcement learning (DRL) algorithms. In our algorithms, agents take action in both a distributed and centralized manner. In the distributed approach, each device learns the choice of the access probability and the slot, guided by feedback from the base station (BS). Simultaneously, in the centralized approach, the BS restricts a specific number of devices from accessing the network and dynamically adjusts the frame length based on the transmission results of devices. Our simulation results demonstrate that the proposed scheme surpasses benchmark schemes and exhibits significant potential to minimize AoI performance.
 
 
 # Communications Coordinator
-- company: Springfield Women & Children's Center
-  position: Communications Coordinator
-  duration:   Jun, 2008  &mdash; May, 2010
-  summary: Led communication efforts across digital and traditional media channels for marketing and public relations, internal communication strategies, and coordinated support programs for the recipients of the center's services.
+- company: Research On Massive Random Access Method for Space-Air-Ground Integrated Network
+  position: <i>Mobile Communications</i>
+  duration: Published
+  summary: Space-air-ground-sea integrated networks (SAGSINs) provide a novel solution and perspective to address the challenge of accommodating massive random access in communication systems. In response to the escalating issue of handling massive device access, a reinforcement learning-based random access method is proposed to enhance the success rate of device connections in such scenarios. Firstly, the MAC layer system model within the SAGSINs is elucidated, followed by a comparative analysis of five distinct random access methods. Finally, experimental results demonstrate the efficacy of the proposed adaptive random access method in increasing the number of successfully connected devices within the network system.
