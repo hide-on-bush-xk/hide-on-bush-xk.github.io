@@ -20,8 +20,8 @@ resume_contact_email:           "xuke695615201@gmail.com"
 resume_contact_telephone:       "+86 177 1508 5190"
 resume_contact_address:         "Xinmofan Road No.66, Nanjing, Jiangsu, China"
 
-resume_header_contact_info:     "Xinmofan Road No.66, Nanjing • +86 177 1508 5190 • xuke695615201@gmail.com"
-display_header_contact_info:    "false"
+resume_header_contact_info:     "Nanjing, China • +86 177 1508 5190 • xuke695615201@gmail.com"
+display_header_contact_info:    "true"
 
 resume_header_intro: "<p>I am a MPhill student in the school of Information & Communication Engineering at Nanjing University of Posts and Telecommunications (NJUPT). I am currently in National Engineering Research Center of Communications & Networking working with Prof. Youyun Xu (Senior Member, IEEE).</p>"
 
@@ -49,7 +49,7 @@ resume_social_links:
   # resume_twitter_url:           "http://twitter.com/jglovier"
   # resume_dribbble_url:          "https://dribbble.com/jag"
   # resume_facebook_url:          "insert Facebook URL here"
-  # resume_linkedin_url:          "https://www.linkedin.com/in/joelglovier"
+  resume_linkedin_url:          "https://www.linkedin.com/in/ke-xu-386880308/"
   # resume_instagram_url:         "insert your Instagram URL here"
   resume_website_url:           "http://hide-on-bush-xk.github.io/images/resume.pdf"
   # resume_medium_url:            "https://medium.com/@jglovier"
