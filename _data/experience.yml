@@ -1,8 +1,8 @@
 # Pub
 # WCSP2024
 - company: Learning-Based Random Access Protocol With RIS-Aided Cell-Free Networks
-  position: <i>IEEE 16th International Conference on Wireless Communications and Signal Processing</i> (WCSP2024)
-  duration: Under review
+  position: <i>IEEE Communications Letters</i>
+  duration: Under Review
   summary: As the wireless networking technology transitions into its sixth generation (6G), the demand for higher reliability and increased speed is ever-growing. In this paper, we propose a learning-based random access protocol with RIS-aided cell-free networks to optimize throughput and age of information. Specifically, our scheme contains two optimized components, preamble selection and preamble collision resolution. Powered by the deep reinforcement learning (DRL) algorithm, the proposed protocol aims to maximize the long-term reward of the network by learning the optimal policy for the UEs to access the network. The proposed scheme is evaluated through simulations, and the results show that our scheme outperforms the conventional random access schemes in terms of the average age of information, data throughput and preamble collision. Given the practical properties in our simulation, the proposed scheme is a promising solution in RIS-aided cell-free networks.
 
 # Director of Digital Stratgy
