@@ -25,6 +25,9 @@ theme = 'PaperMod'
     [[params.profileMode.buttons]]
       name = "Email"
       url = "mailto:kexu@vt.edu"
+    [[params.profileMode.buttons]]
+      name = "LinkedIn"
+      url = "https://www.linkedin.com/in/kexu5190"
 
 # Navigation Menu Configuration
 [menu]
