@@ -1,0 +1,23 @@
+baseURL = 'https://hide-on-bush-xk.github.io/'
+languageCode = 'en-us'
+title = 'Your Name | ECE Researcher'
+theme = 'PaperMod'
+
+[params]
+  # 开启黑白模式切换开关（非常 Apple 的丝滑体验）
+  defaultTheme = "auto"
+  ShowThemeToggle = true
+  
+  # 首页个人信息简介
+  [params.profileMode]
+    enabled = true
+    title = "Hello, I'm Ke XU"
+    subtitle = "PhD Student in ECE | Network Engineer. Focusing on 5G/6G, Digital Twin, and Wireless Communications."
+    
+    # 你的社交链接或 ORCID
+    [[params.profileMode.buttons]]
+      name = "ORCID"
+      url = "https://orcid.org/my-orcid?orcid=0000-0001-5447-8008"
+    [[params.profileMode.buttons]]
+      name = "Email"
+      url = "mailto:你的邮箱@example.com"
