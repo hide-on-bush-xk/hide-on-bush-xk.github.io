@@ -1,8 +1,6 @@
 # Personal Academic Website
 
-[![Deploy Hugo site to Pages](https://github.com/hide-on-bush-xk/hide-on-bush-xk.github.io/actions/workflows/hugo.yaml/badge.svg)](https://github.com/hide-on-bush-xk/hide-on-bush-xk.github.io/actions/workflows/hugo.yaml)
-
-This repository contains the source code for my personal academic and professional portfolio. The site serves as a central hub for my research publications in wireless communications (5G/6G), network engineering projects, and technical background.
+This repository contains the source code for my personal academic and professional portfolio. The site serves as a central hub for my research publications in wireless communications.
 
 🌐 **Live Site:** [https://hide-on-bush-xk.github.io/](https://hide-on-bush-xk.github.io/)
 
