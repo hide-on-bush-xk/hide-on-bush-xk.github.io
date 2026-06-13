@@ -1,23 +1,47 @@
 baseURL = 'https://hide-on-bush-xk.github.io/'
-languageCode = 'en-us'
-title = 'Your Name | ECE Researcher'
+locale = 'en-us'
+title = 'Ke XU | ECE Researcher'
 theme = 'PaperMod'
 
 [params]
-  # 开启黑白模式切换开关（非常 Apple 的丝滑体验）
   defaultTheme = "auto"
   ShowThemeToggle = true
   
-  # 首页个人信息简介
   [params.profileMode]
     enabled = true
     title = "Hello, I'm Ke XU"
-    subtitle = "PhD Student in ECE | Network Engineer. Focusing on 5G/6G, Digital Twin, and Wireless Communications."
+    subtitle = "Incoming PhD Student in ECE @ Virginia Tech | Network Engineer. Focusing on Wireless Communications."
     
-    # 你的社交链接或 ORCID
+    # ---- 个人照片配置开始 ----
+    # 注意：路径不要写 static，直接从 images/ 开始写，Hugo 会自动去 static 目录下寻找
+    imageUrl = "images/avatar.jpeg" 
+    imageWidth = 180              # 建议尺寸 150-180 之间，PaperMod 会自动渲染为优雅的圆形
+    imageHeight = 180
+    # ---- 个人照片配置结束 ----
+    
     [[params.profileMode.buttons]]
       name = "ORCID"
       url = "https://orcid.org/my-orcid?orcid=0000-0001-5447-8008"
     [[params.profileMode.buttons]]
       name = "Email"
-      url = "mailto:你的邮箱@example.com"
+      url = "mailto:kexu@vt.edu"
+
+# Navigation Menu Configuration
+[menu]
+  [[menu.main]]
+    identifier = "story"
+    name = "My Story"
+    url = "/story/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Engineering Projects"
+    url = "/projects/"
+    weight = 30
