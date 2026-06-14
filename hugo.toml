@@ -9,7 +9,7 @@ theme = 'PaperMod'
   
   [params.profileMode]
     enabled = true
-    title = "Hello, I'm Ke XU"
+    title = "Hello, I'm XU, Ke."
     subtitle = "Incoming PhD Student in ECE @ Virginia Tech | Network Engineer. Focusing on Wireless Communications."
     
     # ---- 个人照片配置开始 ----
@@ -28,6 +28,11 @@ theme = 'PaperMod'
     [[params.profileMode.buttons]]
       name = "LinkedIn"
       url = "https://www.linkedin.com/in/kexu5190"
+    [[params.profileMode.buttons]]
+      name = "Google Scholar"
+      url = "https://scholar.google.com/citations?user=clGpG94AAAAJ&hl=en"
+
+      
 
 # Navigation Menu Configuration
 [menu]
