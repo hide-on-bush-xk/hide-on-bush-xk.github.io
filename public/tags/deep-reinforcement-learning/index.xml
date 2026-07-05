@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Deep Reinforcement Learning on Ke XU | ECE Researcher</title>
+    <link>http://localhost:57930/tags/deep-reinforcement-learning/</link>
+    <description>Recent content in Deep Reinforcement Learning on Ke XU | ECE Researcher</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:57930/tags/deep-reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autonomous AI Agent for Network Energy Efficiency</title>
+      <link>http://localhost:57930/projects/ai_agent_development/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57930/projects/ai_agent_development/</guid>
+      <description>An intelligent agent driven by time-series prediction and FastAPI backend to optimize power consumption in simulated network environments.</description>
+    </item>
+  </channel>
+</rss>

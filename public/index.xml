@@ -2,25 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ke XU | ECE Researcher</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:57930/</link>
     <description>Recent content on Ke XU | ECE Researcher</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Jun 2026 08:52:46 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:57930/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Story</title>
-      <link>http://localhost:1313/story/</link>
-      <pubDate>Sat, 13 Jun 2026 08:52:46 -0400</pubDate>
-      <guid>http://localhost:1313/story/</guid>
-      <description></description>
+      <title>Digital Twin-Assisted Network Simulation</title>
+      <link>http://localhost:57930/projects/digital_twin_simulation/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57930/projects/digital_twin_simulation/</guid>
+      <description>Utilized the Planet software suite to construct a large-scale digital twin for SKT, simulating RF propagation and predicting macroscopic network KPIs.</description>
+    </item>
+    <item>
+      <title>Autonomous AI Agent for Network Energy Efficiency</title>
+      <link>http://localhost:57930/projects/ai_agent_development/</link>
+      <pubDate>Sun, 15 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57930/projects/ai_agent_development/</guid>
+      <description>An intelligent agent driven by time-series prediction and FastAPI backend to optimize power consumption in simulated network environments.</description>
     </item>
     <item>
       <title>A Hybrid Collaborative Learning for Age of Information Minimization in Massive Access</title>
-      <link>http://localhost:1313/publications/a-hybrid-collaborative-learning-for-age-of-information-minimization-in-massive-access/</link>
+      <link>http://localhost:57930/publications/a-hybrid-collaborative-learning-for-age-of-information-minimization-in-massive-access/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/publications/a-hybrid-collaborative-learning-for-age-of-information-minimization-in-massive-access/</guid>
+      <guid>http://localhost:57930/publications/a-hybrid-collaborative-learning-for-age-of-information-minimization-in-massive-access/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:57930/story/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:57930/story/</guid>
+      <description>&lt;p&gt;I am an incoming EE Ph.D. student at Virginia Tech, focusing on wireless communications. Outside of the terminal, I spend my downtime optimizing culinary techniques and practicing classical vocal music.&lt;/p&gt;
+&lt;h3 id=&#34;hk-is-great&#34;&gt;HK is great&lt;/h3&gt;
+&lt;figure class=&#34;align-center &#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;http://localhost:57930/images/hk-harbor-2026.png#center&#34;
+         alt=&#34;Victoria Harbour, Hong Kong, June 2026&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Victoria Harbour, Hong Kong, June 2026&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;disney-family-day&#34;&gt;Disney Family Day&lt;/h3&gt;
+&lt;p&gt;A huge thanks to Ericsson for giving me the chance to be a part of Disney Family Day. The absolute highlight was the exclusive access after 9 PM, as the park was reserved solely for the Foreign Enterprise Union.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
