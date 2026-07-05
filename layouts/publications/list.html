@@ -1,0 +1,135 @@
+{{ define "main" }}
+<style>
+    /* 1. 突破父节点全局宽度限制 */
+    .main {
+        max-width: 1100px !important; 
+    }
+    
+    /* 2. LaTeX 级悬挂缩进协议 */
+    .publication-item {
+        margin-bottom: 25px; 
+        list-style-position: outside;
+        padding-left: 1.5em !important;
+        text-indent: -1.5em !important;
+    }
+
+    .atomic-unit {
+        white-space: nowrap;
+    }
+
+    /* 3. 行内按钮组样式：消除 I/O 阻断，紧跟文本末尾 */
+    .action-inline-buttons {
+        display: inline-block;
+        white-space: nowrap;
+        text-indent: 0; /* 重置悬挂缩进对按钮的影响 */
+        margin-left: 8px;
+        font-family: monospace;
+        font-size: 0.85rem;
+    }
+
+    .action-inline-buttons a, .action-inline-buttons span {
+        text-decoration: underline;
+        color: inherit;
+        cursor: pointer;
+        user-select: none;
+    }
+</style>
+
+<header class="page-header" style="margin-top: 30px; margin-bottom: 20px;">
+    <h1>{{ .Title }}</h1>
+</header>
+
+<div class="post-content" style="font-family: serif; line-height: 1.6; font-size: 1rem;">
+    <ol style="padding-left: 25px; margin: 0;">
+        {{ range .Pages.ByDate.Reverse }}
+        <li class="publication-item">
+            <span class="citation-row">
+                {{ .Params.authors }}, 
+                "<strong>{{ .Title }}</strong>," 
+                <span class="atomic-unit"><em>{{ .Params.journal }}</em>,</span> 
+                <span class="atomic-unit">{{ .Params.year }}.</span>
+
+                <span class="action-inline-buttons">
+                    <a href="https://ieeexplore.ieee.org/author/37088690670" target="_blank" rel="noopener noreferrer">[Link]</a>
+                    <span style="margin-left: 8px;" onclick="copyAndNotify('bib-{{ .File.UniqueID }}')">[Cite]</span>
+                </span>
+            </span>
+
+            <div id="bib-{{ .File.UniqueID }}" style="display: none;">@article{xu{{ .Params.year }},
+  author = { {{ .Params.authors }} },
+  title = { {{ .Title }} },
+  journal = { {{ .Params.journal }} },
+  year = { {{ .Params.year }} }
+}</div>
+        </li>
+        {{ end }}
+    </ol>
+</div>
+
+<div id="academic-toast" style="
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(17, 17, 17, 0.9);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 99999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease-in-out;
+">Copied to Clipboard!</div>
+
+<script>
+function copyAndNotify(elementId) {
+    const textToCopy = document.getElementById(elementId).innerText;
+    
+    // 1. 异步执行剪贴板写操作
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        
+        // 2. 触发音频合成引擎 (Web Audio API)
+        // 优点：无需拉取外部任何 MP3 资源，零网络带宽延迟，100% 成功率
+        try {
+            const AudioContext = window.AudioContext || window.webkitAudioContext;
+            if (AudioContext) {
+                const ctx = new AudioContext();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                
+                osc.type = 'sine'; // 正弦波，声音清脆
+                osc.frequency.setValueAtTime(1050, ctx.currentTime); // 设定1050Hz高频电子提示音
+                
+                gain.gain.setValueAtTime(0.04, ctx.currentTime); // 控制动态增益，防止破音
+                gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.08); // 80毫秒内指数级淡出
+                
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                
+                osc.start();
+                osc.stop(ctx.currentTime + 0.08);
+            }
+        } catch (audioError) {
+            console.log("Audio feedback blocked by browser safety policy.");
+        }
+
+        // 3. 状态机切换：唤醒 Toast UI
+        const toast = document.getElementById('academic-toast');
+        toast.style.opacity = '1';
+        
+        // 4. 定时器中断：1.2秒后自动溶解
+        setTimeout(() => {
+            toast.style.opacity = '0';
+        }, 1200);
+
+    }).catch(err => {
+        console.error('System I/O Error during copying: ', err);
+    });
+}
+</script>
+{{ end }}
