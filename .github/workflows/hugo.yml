@@ -2,7 +2,7 @@ name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
   schedule:
     # 定时任务：每周日 UTC 时间 00:00 自动触发同步
