@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>RF Simulation on Ke XU | ECE Researcher</title>
-    <link>http://localhost:1313/tags/rf-simulation/</link>
+    <link>https://hide-on-bush-xk.github.io/tags/rf-simulation/</link>
     <description>Recent content in RF Simulation on Ke XU | ECE Researcher</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/rf-simulation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hide-on-bush-xk.github.io/tags/rf-simulation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Twin-Assisted Network Simulation</title>
-      <link>http://localhost:1313/projects/digital_twin_simulation/</link>
+      <link>https://hide-on-bush-xk.github.io/projects/digital_twin_simulation/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/digital_twin_simulation/</guid>
+      <guid>https://hide-on-bush-xk.github.io/projects/digital_twin_simulation/</guid>
       <description>Utilized the Planet software suite to construct a large-scale digital twin for SKT, simulating RF propagation and predicting macroscopic network KPIs.</description>
     </item>
   </channel>
