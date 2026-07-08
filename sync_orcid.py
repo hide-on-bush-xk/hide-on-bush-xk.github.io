@@ -26,7 +26,8 @@ def fetch_and_generate():
         
         authors_str = "Ke XU"
         journal_title = "IEEE Transactions / Conference"
-        
+        abstract = ""
+
         if put_code:
             detail_url = f"https://pub.orcid.org/v3.0/{ORCID_ID}/work/{put_code}"
             detail_res = requests.get(detail_url, headers=headers)
@@ -39,6 +40,9 @@ def fetch_and_generate():
                 author_names = [c.get("credit-name", {}).get("value") for c in contributors if c.get("credit-name", {}).get("value")]
                 if author_names:
                     authors_str = ", ".join(author_names)
+                desc_node = detail_data.get("short-description")
+                if desc_node:
+                    abstract = " ".join(desc_node.split())
 
         safe_title = "".join(x for x in title if x.isalnum() or x in " -_").replace(" ", "-").lower()
         
@@ -49,6 +53,7 @@ authors: '{authors_str}'
 journal: '{journal_title}'
 year: '{year}'
 paper_url: '{url}'
+abstract: '{abstract.replace("'", "''")}'
 draft: false
 ---
 """

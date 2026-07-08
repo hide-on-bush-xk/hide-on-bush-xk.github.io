@@ -44,16 +44,27 @@
         {{ range .Pages.ByDate.Reverse }}
         <li class="publication-item">
             <span class="citation-row">
-                {{ .Params.authors }}, 
-                "<strong>{{ .Title }}</strong>," 
-                <span class="atomic-unit"><em>{{ .Params.journal }}</em>,</span> 
+                {{ replaceRE `(?i)(Ke Xu)` "<strong>$1</strong>" .Params.authors | safeHTML }},
+                "<strong>{{ .Title }}</strong>,"
+                <span class="atomic-unit"><em>{{ .Params.journal }}</em>,</span>
                 <span class="atomic-unit">{{ .Params.year }}.</span>
 
                 <span class="action-inline-buttons">
+                    {{ with .Params.paper_url }}
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[DOI]</a>
+                    {{ else }}
                     <a href="https://ieeexplore.ieee.org/author/37088690670" target="_blank" rel="noopener noreferrer">[Link]</a>
+                    {{ end }}
                     <span style="margin-left: 8px;" onclick="copyAndNotify('bib-{{ .File.UniqueID }}')">[Cite]</span>
                 </span>
             </span>
+
+            {{ with .Params.abstract }}
+            <details style="text-indent: 0; margin-top: 6px; font-size: 0.9rem;">
+                <summary style="cursor: pointer; font-family: monospace; font-size: 0.85rem;">Abstract</summary>
+                <p style="margin: 6px 0 0;">{{ . }}</p>
+            </details>
+            {{ end }}
 
             <div id="bib-{{ .File.UniqueID }}" style="display: none;">@article{xu{{ .Params.year }},
   author = { {{ .Params.authors }} },

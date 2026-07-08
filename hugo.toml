@@ -6,6 +6,9 @@ theme = 'PaperMod'
 [params]
   defaultTheme = "auto"
   ShowThemeToggle = true
+  description = "Ke Xu — Incoming PhD student in ECE at Virginia Tech, researching wireless communications, massive access, and Age of Information."
+  keywords = ["Ke Xu", "Virginia Tech", "ECE", "Wireless Communications", "Age of Information", "PhD"]
+  author = "Ke Xu"
   
   [params.profileMode]
     enabled = true
@@ -19,6 +22,9 @@ theme = 'PaperMod'
     imageHeight = 180
     # ---- 个人照片配置结束 ----
     
+    [[params.profileMode.buttons]]
+      name = "CV"
+      url = "/cv.pdf"
     [[params.profileMode.buttons]]
       name = "ORCID"
       url = "https://orcid.org/my-orcid?orcid=0000-0001-5447-8008"

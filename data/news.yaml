@@ -1,0 +1,8 @@
+# Homepage News — newest first. Add a new item at the top; keep dates short.
+items:
+  - date: "Aug 2026"
+    text: "Starting my PhD in ECE at **Virginia Tech**. 🎉"
+  - date: "Sep 2025"
+    text: "Joined **Ericsson** (Nanjing) as a Network Engineer."
+  - date: "Feb 2025"
+    text: "Our paper on Age of Information minimization was published in *IEEE Transactions on Vehicular Technology*."
