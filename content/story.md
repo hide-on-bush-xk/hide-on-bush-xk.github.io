@@ -1,4 +1,3 @@
-
 ---
 title: "About Me"
 draft: false
@@ -15,7 +14,7 @@ Outside of the terminal, I spend my downtime optimizing culinary techniques and 
 
 ### HK is great
 
-{{< figure src="/images/hk-harbor-2026.png" caption="Victoria Harbour, Hong Kong, June 2026" align="center" >}}
+{{< peek src="/images/hk-harbor-2026.png" caption="Victoria Harbour, Hong Kong, June 2026" icon="🌃" >}}
 
 ### Disney Family Day
 
@@ -25,4 +24,4 @@ We kicked off the day with the Explorer Canoes. Seated in the last row, we were 
 
 The rest of the day was just a perfect mix of great food, non-stop attractions, and some much-needed downtime.
 
-{{< figure src="/images/shanghai-disney-2026.jpeg" caption="Disney Resort, Shanghai, Mar 2026" align="center" >}}
+{{< peek src="/images/shanghai-disney-2026.jpeg" caption="Disney Resort, Shanghai, Mar 2026" icon="🎠" >}}

@@ -1,0 +1,11 @@
+<details class="peek" style="margin: 14px 0; text-align: center;">
+    <summary style="cursor: pointer; list-style: none; display: inline-block; font-size: 1.4rem; opacity: .55; transition: opacity .2s, transform .2s;">{{ .Get "icon" | default "✦" }}</summary>
+    <figure style="margin: 10px 0 0;">
+        <img src="{{ .Get "src" }}" alt="{{ .Get "caption" }}" loading="lazy" style="max-width: 100%; border-radius: 8px;">
+        <figcaption style="font-size: .85rem; color: var(--secondary); margin-top: 6px;">{{ .Get "caption" }}</figcaption>
+    </figure>
+</details>
+<style>
+    .peek summary::-webkit-details-marker { display: none }
+    .peek summary:hover { opacity: 1; transform: scale(1.15) }
+</style>
