@@ -11,17 +11,3 @@ Outside of the terminal, I spend my downtime optimizing culinary techniques and 
 ---
 
 ## Life
-
-### HK is great
-
-{{< peek src="/images/hk-harbor-2026.png" caption="Victoria Harbour, Hong Kong, June 2026" icon="🌃" >}}
-
-### Disney Family Day
-
- A huge thanks to Ericsson for giving me the chance to be a part of Disney Family Day. The absolute highlight was the exclusive access after 9 PM, as the park was reserved solely for the Foreign Enterprise Union.
-
-We kicked off the day with the Explorer Canoes. Seated in the last row, we were expecting a relaxing, scenic cruise, but it quickly turned into a serious upper-body workout. The girl sitting next to us was incredibly energetic, and her enthusiasm was totally contagious. I decided to match her pace and rowed as hard as I could. To our surprise, all that unexpected effort actually paid off—the staff noticed, and we were the only ones on the entire boat to be rewarded with a set of limited-edition stickers.
-
-The rest of the day was just a perfect mix of great food, non-stop attractions, and some much-needed downtime.
-
-{{< peek src="/images/shanghai-disney-2026.jpeg" caption="Disney Resort, Shanghai, Mar 2026" icon="🎠" >}}
