@@ -6,3 +6,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Private documents (never publish)
+_private/
