@@ -6,14 +6,14 @@ theme = 'PaperMod'
 [params]
   defaultTheme = "auto"
   ShowThemeToggle = true
-  description = "Ke Xu — Incoming PhD student in ECE at Virginia Tech, researching wireless communications, massive access, and Age of Information."
+  description = "Ke Xu — PhD student in ECE at Virginia Tech, researching wireless communications, massive access, and Age of Information."
   keywords = ["Ke Xu", "Virginia Tech", "ECE", "Wireless Communications", "Age of Information", "PhD"]
   author = "Ke Xu"
   
   [params.profileMode]
     enabled = true
     title = "Hello, I'm XU, Ke."
-    subtitle = "Incoming PhD Student in ECE @ Virginia Tech | Network Engineer. Focusing on Wireless Communications."
+    subtitle = "PhD Student in ECE @ Virginia Tech | Previously Network Engineer @ Ericsson. Focusing on Wireless Communications."
     
     # ---- 个人照片配置开始 ----
     # 注意：路径不要写 static，直接从 images/ 开始写，Hugo 会自动去 static 目录下寻找
@@ -25,9 +25,23 @@ theme = 'PaperMod'
     [[params.profileMode.buttons]]
       name = "ORCID"
       url = "https://orcid.org/my-orcid?orcid=0000-0001-5447-8008"
+    # 带 options 的按钮：鼠标悬停（或点击）展开菜单，点选项即复制到剪贴板
     [[params.profileMode.buttons]]
       name = "Email"
-      url = "mailto:kexu@vt.edu"
+      [[params.profileMode.buttons.options]]
+        label = "School"
+        value = "kexu@vt.edu"
+      [[params.profileMode.buttons.options]]
+        label = "Personal"
+        value = "xuke695615201@gmail.com"
+    [[params.profileMode.buttons]]
+      name = "Phone"
+      [[params.profileMode.buttons.options]]
+        label = "US"
+        value = "+1 540 204 5233"
+      [[params.profileMode.buttons.options]]
+        label = "China"
+        value = "+86 177 1508 5190"
     [[params.profileMode.buttons]]
       name = "LinkedIn"
       url = "https://www.linkedin.com/in/kexu5190"

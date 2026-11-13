@@ -1,7 +1,7 @@
 # Homepage News — newest first. Add a new item at the top; keep dates short.
 items:
   - date: "Aug 2026"
-    text: "Starting my PhD in ECE at **Virginia Tech**. 🎉"
+    text: "Started my PhD in ECE at **Virginia Tech**. 🎉"
   - date: "May 2026"
     text: "Our paper on priority-aware unsourced random access for massive IoT was accepted to *IEEE VTC2026-Fall* (Boston)."
   - date: "Sep 2025"

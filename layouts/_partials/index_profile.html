@@ -37,6 +37,21 @@
         {{- with .buttons }}
         <div class="buttons">
             {{- range . }}
+            {{- if .options }}
+            <div class="contact-menu">
+                <button class="button" type="button" aria-haspopup="true" aria-expanded="false" title="{{ .name }}">
+                    <span class="button-inner">{{ .name }}</span>
+                </button>
+                <div class="contact-menu-list">
+                    {{- range .options }}
+                    <button class="contact-option" type="button" data-copy="{{ .value }}" title="Click to copy">
+                        <span class="contact-label">{{ .label }}</span>
+                        <span class="contact-value">{{ .value }}</span>
+                    </button>
+                    {{- end }}
+                </div>
+            </div>
+            {{- else }}
             <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
                 <span class="button-inner">
                     {{ .name }}
@@ -50,6 +65,7 @@
                     {{- end }}
                 </span>
             </a>
+            {{- end }}
             {{- end }}
         </div>
         {{- end }}
@@ -69,3 +85,178 @@
     </div>
     {{- end}}
 </div>
+
+<style>
+    .contact-menu {
+        position: relative;
+        display: inline-flex;
+    }
+
+    .contact-menu > .button {
+        border: 0;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .contact-menu-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        padding-top: 6px; /* 透明桥接区，鼠标从按钮移到菜单时不会断开 hover */
+        white-space: nowrap;
+    }
+
+    /* 显隐只由 .open 一个状态控制（JS 负责 hover / 点击 / 键盘），避免多状态互相打架 */
+    .contact-menu.open .contact-menu-list {
+        display: block;
+    }
+
+    /* 窄屏：菜单相对整个按钮区居中，防止溢出视口 */
+    @media (max-width: 480px) {
+        .buttons {
+            position: relative;
+        }
+
+        .contact-menu {
+            position: static;
+        }
+
+        .contact-menu-list {
+            max-width: calc(100vw - 2 * var(--gap));
+        }
+    }
+
+    .contact-option {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid var(--border);
+        background: var(--entry);
+        color: var(--primary);
+        font-size: 0.85rem;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .contact-option:first-child {
+        border-radius: var(--radius) var(--radius) 0 0;
+    }
+
+    .contact-option:last-child {
+        border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .contact-option + .contact-option {
+        border-top: 0;
+    }
+
+    .contact-option:hover,
+    .contact-option:focus-visible {
+        background: var(--tertiary);
+    }
+
+    .contact-label {
+        min-width: 4.5em;
+        color: var(--secondary);
+        font-family: monospace;
+    }
+</style>
+
+<script>
+(function () {
+    const menus = document.querySelectorAll('.contact-menu');
+
+    function setOpen(menu, open) {
+        menu.classList.toggle('open', open);
+        menu.querySelector('.button').setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) {
+            menus.forEach(function (m) {
+                if (m !== menu) setOpen(m, false);
+            });
+        }
+    }
+
+    function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+            return navigator.clipboard.writeText(text);
+        }
+        // 非 HTTPS 环境（如局域网预览）的降级方案
+        return new Promise(function (resolve, reject) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            const ok = document.execCommand('copy');
+            document.body.removeChild(ta);
+            ok ? resolve() : reject(new Error('copy failed'));
+        });
+    }
+
+    menus.forEach(function (menu) {
+        const trigger = menu.querySelector('.button');
+        let lastPointer = '';
+
+        // 鼠标：悬停展开，移开收起
+        menu.addEventListener('pointerenter', function (e) {
+            if (e.pointerType === 'mouse') setOpen(menu, true);
+        });
+        menu.addEventListener('pointerleave', function (e) {
+            if (e.pointerType === 'mouse') setOpen(menu, false);
+        });
+
+        // 触屏 / 键盘：点击按钮切换；鼠标点击时菜单已因悬停展开，保持展开
+        trigger.addEventListener('pointerdown', function (e) {
+            lastPointer = e.pointerType;
+        });
+        trigger.addEventListener('click', function () {
+            setOpen(menu, lastPointer === 'mouse' ? true : !menu.classList.contains('open'));
+            lastPointer = '';
+        });
+
+        // 键盘 Tab 离开时收起
+        menu.addEventListener('focusout', function (e) {
+            if (!menu.contains(e.relatedTarget) && !menu.matches(':hover')) setOpen(menu, false);
+        });
+
+        menu.querySelectorAll('.contact-option').forEach(function (option) {
+            option.addEventListener('click', function () {
+                const valueEl = option.querySelector('.contact-value');
+                const value = option.dataset.copy;
+                // 锁定宽度，提示文字变短时菜单不会缩窄跳动
+                if (!option.style.minWidth) option.style.minWidth = option.offsetWidth + 'px';
+                copyText(value).then(function () {
+                    valueEl.textContent = 'Copied!';
+                }).catch(function () {
+                    valueEl.textContent = 'Copy failed';
+                }).then(function () {
+                    clearTimeout(option._resetTimer);
+                    option._resetTimer = setTimeout(function () {
+                        valueEl.textContent = value;
+                        option.style.minWidth = '';
+                    }, 1200);
+                });
+            });
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        menus.forEach(function (m) {
+            if (!m.contains(e.target)) setOpen(m, false);
+        });
+    });
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            menus.forEach(function (m) { setOpen(m, false); });
+        }
+    });
+})();
+</script>
