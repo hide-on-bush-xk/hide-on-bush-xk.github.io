@@ -2,7 +2,7 @@
 title: "About Me"
 draft: false
 ---
-I am a Ph.D. student in Electrical & Computer Engineering at **Virginia Tech**, focusing on wireless communications. My research interests include **massive random access**, **Age of Information (AoI) minimization**, and learning-based optimization of next-generation networks.
+I am a Ph.D. student in Electrical & Computer Engineering at **Virginia Tech**, focusing on wireless communications. My research interests mainly include **digital twins** and **channel modeling**, followed by **massive random access**, **Age of Information (AoI) minimization**, and learning-based optimization of next-generation networks.
 
 Before starting my PhD, I worked as a Network Engineer at **Ericsson**.
 

@@ -50,8 +50,9 @@
                 <span class="atomic-unit">{{ .Params.year }}{{ with .Params.status }} ({{ . }}){{ end }}.</span>
 
                 <span class="action-inline-buttons">
+                    {{ $linkLabel := .Params.link_label | default "DOI" }}
                     {{ with .Params.paper_url }}
-                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[DOI]</a>
+                    <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[{{ $linkLabel }}]</a>
                     {{ else }}{{ if not .Params.status }}
                     <a href="https://ieeexplore.ieee.org/author/37088690670" target="_blank" rel="noopener noreferrer">[Link]</a>
                     {{ end }}{{ end }}

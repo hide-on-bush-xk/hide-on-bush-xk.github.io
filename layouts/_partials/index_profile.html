@@ -31,7 +31,13 @@
         {{- end }}
         {{- end }}
         <h1>{{ .title | default site.Title | markdownify }}</h1>
+        {{- if reflect.IsSlice .subtitle }}
+        {{- range .subtitle }}
+        <span style="display: block;">{{ . | markdownify }}</span>
+        {{- end }}
+        {{- else }}
         <span>{{ .subtitle | markdownify }}</span>
+        {{- end }}
         {{- partial "social_icons.html" -}}
 
         {{- with .buttons }}

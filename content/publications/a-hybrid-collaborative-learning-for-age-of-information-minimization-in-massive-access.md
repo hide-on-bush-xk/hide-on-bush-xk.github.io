@@ -3,6 +3,7 @@ title: 'A Hybrid Collaborative Learning for Age of Information Minimization in M
 authors: 'Ke Xu, Youyun Xu, Xiaoming Wang, Xianbin Wang'
 journal: 'IEEE Transactions on Vehicular Technology'
 year: '2025'
+date: 2025-02-01
 paper_url: 'https://doi.org/10.1109/TVT.2024.3467255'
 abstract: ''
 draft: false
