@@ -47,14 +47,14 @@
                 {{ replaceRE `(?i)(Ke Xu)` "<strong>$1</strong>" .Params.authors | safeHTML }},
                 "<strong>{{ .Title }}</strong>,"
                 <span class="atomic-unit"><em>{{ .Params.journal }}</em>,</span>
-                <span class="atomic-unit">{{ .Params.year }}.</span>
+                <span class="atomic-unit">{{ .Params.year }}{{ with .Params.status }} ({{ . }}){{ end }}.</span>
 
                 <span class="action-inline-buttons">
                     {{ with .Params.paper_url }}
                     <a href="{{ . }}" target="_blank" rel="noopener noreferrer">[DOI]</a>
-                    {{ else }}
+                    {{ else }}{{ if not .Params.status }}
                     <a href="https://ieeexplore.ieee.org/author/37088690670" target="_blank" rel="noopener noreferrer">[Link]</a>
-                    {{ end }}
+                    {{ end }}{{ end }}
                     <span style="margin-left: 8px;" onclick="copyAndNotify('bib-{{ .File.UniqueID }}')">[Cite]</span>
                 </span>
             </span>
@@ -66,12 +66,22 @@
             </details>
             {{ end }}
 
+            {{ if eq .Params.type "conference" }}
+            <div id="bib-{{ .File.UniqueID }}" style="display: none;">@inproceedings{xu{{ .Params.year }},
+  author = { {{ .Params.authors }} },
+  title = { {{ .Title }} },
+  booktitle = { {{ .Params.journal }} },
+  year = { {{ .Params.year }} }{{ with .Params.status }},
+  note = { {{ . }} }{{ end }}
+}</div>
+            {{ else }}
             <div id="bib-{{ .File.UniqueID }}" style="display: none;">@article{xu{{ .Params.year }},
   author = { {{ .Params.authors }} },
   title = { {{ .Title }} },
   journal = { {{ .Params.journal }} },
   year = { {{ .Params.year }} }
 }</div>
+            {{ end }}
         </li>
         {{ end }}
     </ol>
